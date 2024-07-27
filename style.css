@@ -1,0 +1,534 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(17, 17, 17);
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    width: 100%;
+    /* background-color: red; */
+    padding: 20px 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+nav ul{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+nav ul li a{
+    padding: 7px 20px;
+    /* background-color: yellow; */
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    position: relative;
+}
+nav ul li a::before{
+    content: " ";
+    height: 10px;
+    width: 10px;
+    background-color: orange;
+    margin-left: -18px;
+    position: absolute;
+    z-index: -1;
+    transition: 0.2s;
+}
+nav ul li a:hover{
+    color: black;
+}
+nav ul li a:hover::before {
+    width: 100%;
+    height: 30px;
+}
+nav a img{
+    filter: invert(1);
+    height: 25px;
+    width: 25px;
+    position: relative;
+    opacity: 0.5;
+}
+nav a img:hover{
+    animation:downloadbtn 1s infinite ;
+    opacity: 0.8;
+}
+@keyframes downloadbtn{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top:2px
+    }
+    100%{
+        top:0px;
+    }
+}
+.container{
+    height: 500px;
+}
+.container img{
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    filter: grayscale(1);
+    opacity: 0.2;
+    border: 15px solid orange;
+    margin-right:100px;
+}
+.headinfo{
+    width: fit-content;
+    position: relative;
+    top: 70px; 
+    left: 50px;
+}
+.headinfo h1{
+    color: white;
+    font-size: 50px;
+    width: fit-content;
+}
+.s1{
+    color: orange;
+}
+.s2{
+    font-size: 30px;
+}
+
+.headinfo a{
+    font-size: 20px;
+    border: 2px solid orange;
+    padding: 7px 12px;
+    margin: 50px 5px;
+    display: flex;
+    position: relative;
+    width: fit-content;
+    transition: 0.2s;
+    
+}
+.headinfo a:hover{
+    color: black;
+}
+.headinfo a::before{
+    content: " ";
+    height: 100%;
+    width: 0%;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+.headinfo a:hover::before{
+    width: 100%;
+}
+.about{
+    width: 100%;
+    padding: 0px 20px 60px;
+}
+.about h2{
+    color: white;
+    font-size: 40px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.about h2::after{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.about p{
+    color: white;
+    margin: 40px 50px 40px 70px;
+    font-size: 20px;
+    position: relative;
+}
+.about p::before{
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background-color: orange;
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: 5px;
+}
+.skills{
+    width: 100%;
+    padding: 0px 20px 60px;
+}
+.skills h2{
+    color: white;
+    font-size: 50px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.skills h2::after{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.skills h2::before{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.scards{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.scard{
+    margin: 20px;
+    background-color: rgb(41, 41, 41);
+    height: 300px;
+    width: 270px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+.scard img{
+    margin: 20px;
+    height: 150px;
+}
+.scard h4{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.projects{
+    width: 100%;
+    padding: 0px 20px 10px;
+}
+.projects h2{
+    color: white;
+    font-size: 50px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.projects h2::after{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.projects h2::before{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.pcards{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.pcard{
+    margin: 20px;
+    background-color: rgb(41, 41, 41);
+    height: 300px;
+    width: 270px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+.pcard img{
+    margin: 20px;
+    width: 150px;
+}
+.pcard h4{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+.pcard:hover{
+    filter: drop-shadow(0px 0px 5px orange);
+    border-color: orange;
+}
+.morepro{
+    width: 100%;
+    margin: auto;
+    display: flex;
+   justify-content: center;
+    margin-bottom: 50px;
+}
+.showmore{
+    color: white;
+    padding: 8px 14px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.showmore:hover{
+    background-color: orange;
+    color: black;
+}
+.contact{
+    width: 100%;
+    padding: 0px 20px;
+}
+.contact h2{
+    color: white;
+    font-size: 50px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.projects h2{
+    color: white;
+    font-size: 50px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.contact h2::after{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.contact h2::before{
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 20px;
+}
+.ccards{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.ccard{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    margin: 10px;
+    min-height: 130px;
+    padding: 0px 50px;
+    transition: 0.2s;
+}
+.ccard{
+    border: 2px solid rgba(255, 166, 0, 0);
+}
+.ccard:hover{
+    border: 2px solid orange;
+    filter: drop-shadow(0px 0px 5px orange);
+}
+.ccard:hover p{
+    color: orange;
+}
+.ccard p{
+    color: white;
+    font-size: 22px;
+    margin-left: 15px;
+}
+.icons{
+    /* background-color: black; */
+    padding: 40px;
+}
+.icons ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+.icons ul li a img{
+    transition: 0.2s;
+    filter: grayscale(1);
+}
+.icons ul li a img:hover{
+    scale: 1.1;
+    filter: grayscale(0);
+}
+#telcard{
+    display: none;
+}
+.backtop{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid orange;
+}
+.backtop a:hover{
+    color: orange;
+    
+} 
+
+
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+.headinfo h1{
+    font-size: 35px;
+}
+nav ul{
+    gap: 15px;
+}
+.container{
+    height: 400px;
+}
+.container img{
+    height: 400px;
+    width: 400px;
+}
+.s2{
+    font-size: 25px;
+}
+#telcard{
+    display: flex;
+}
+.icons ul li a img{
+    filter: none;
+}
+.headinfo a{
+    background-color: orange;
+    color: black;
+}
+nav a img{
+    opacity: 0.8;
+}
+nav a img:hover{
+    animation: none;
+}
+}
+
+
+
+@media screen and (max-width: 600px){
+    .container{
+        height: 350px;
+    }
+    .headinfo{
+        left: 40px;
+    }
+.headinfo h1{
+    font-size: 20px;
+}
+.s2{
+    font-size: 15px;
+}
+.container img{
+    height: 300px;
+    width: 300px;
+    margin-right: 50px;
+}
+#top{
+    position: relative;
+    display: flex;
+}
+#top ul{
+    display: none;
+}
+.ccard img{
+    height: 40px;
+    width: 40px;
+}
+.ccard p{
+    font-size: 12px;
+}
+.about h2, .skills h2, .projects h2, .contact h2{
+    font-size: 30px;
+    margin: 5px;
+}
+.about p{
+    font-size: 15px;
+}
+.scards{
+    padding: 5px;
+}
+.scard{
+    height:240px;
+    width: 200px;
+    margin: 10px;
+}
+.scard img{
+    height:90px;
+}
+.scard h4{
+    font-size: 15px;
+}
+#telcard{
+    display: flex;
+}
+.icons ul li a img{
+    filter: none;
+}
+.headinfo a{
+    background-color: orange;
+    color: black;
+}
+nav a img{
+    opacity: 0.8;
+}
+nav a img:hover{
+    animation: none;
+}
+}
+@media screen and (max-width: 400px){
+    .ccards{
+        padding: 0;
+    }
+}
